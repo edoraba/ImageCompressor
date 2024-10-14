@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Compressor</h1>
+
+        <form id="imageForm" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="imageFile">Select Image:</label>
+                <input type="file" id="imageFile" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <label for="maxSize">Max Size (pixels):</label>
+                <input type="number" id="maxSize" value="2000" required>
+            </div>
+
+            <div class="form-group">
+                <label for="quality">Quality (0-100):</label>
+                <input type="number" id="quality" value="80" required>
+            </div>
+
+            <button type="submit">Compress Image</button>
+        </form>
+
+        <!-- Output div per il pulsante di download -->
+        <div id="output" class="output"></div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
